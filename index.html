@@ -79,9 +79,9 @@
       document.getElementById('language').append(liff.getLanguage()); // client using what's language
       document.getElementById('version').append(liff.getVersion()); // show sdk version
       document.getElementById('accessToken').append(liff.getAccessToken()); // can verify backend
-      document.getElementById('isInClient').append(liff.getIsInClient()); // check browser or line
+      document.getElementById('isInClient').append(liff.isInClient()); // check browser or line
 
-      if(liff.getIsInClient()){
+      if(liff.isInClient()){
         document.getElementById('btnLogOut').style.display = "none";
       }else{
         document.getElementById('btnMsg').style.display = "none";
