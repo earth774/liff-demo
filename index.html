@@ -69,6 +69,11 @@
     }
 
     function getContext() {
+      document.getElementById('type').append(liff.getContext().type) // บอกว่า one on one group 
+      document.getElementById('viewType').append(liff.getContext().viewType) // show type view ex small tall full
+      document.getElementById('utouId').append(liff.getContext().utouId) // show id chat one on one 
+      document.getElementById('roomId').append(liff.getContext().roomId) // then open link from room 
+      document.getElementById('groupId').append(liff.getContext().groupId) // then open link from group 
     }
 
     async function getUserProfile() {
@@ -77,7 +82,7 @@
       document.getElementById('userId').append(profile.userId); // check os 
       document.getElementById('statusMessage').append(profile.statusMessage); // check os 
       document.getElementById('displayName').append(profile.displayName); // check os 
-      document.getElementById('decodeIdToken').append(liff.getDecodedIdToken().email); // check os 
+      document.getElementById('decodedIDToken').append(liff.getDecodedIdToken().email); // check os 
     }
 
     function getEnvironment() {
@@ -102,7 +107,7 @@
       await liff.init({ liffId: "2005802539-5jaAPvK9" })
       getEnvironment()
       getUserProfile()
-      // getContext()
+      getContext()
       // getFriendship()
       // createUniversalLink()
     }
